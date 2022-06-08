@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hoverstyle.css">
+    <title>Document</title>
+   
+    
+</head>
+<body>
+ 
+     
+    </div>
+    <hr style="color: white;">
+   <div >
+     
+
+    <div id="mcontain">
+        <div id="mleft">
+            <p onclick="b1fun()">Live NEWS</p>
+            <p onclick="b2fun()">Entertainment</p>
+            <p onclick="b3fun()">Movies</p>
+            
+        </div>
+        <div id="mright"></div>
+    </div>
+
+    
+</body>
+</html>
+<script>
+    
+
+   var a=JSON.parse(localStorage.getItem("tv1"))
+   var b= JSON.parse(localStorage.getItem("Exclusive"))
+   var c=JSON.parse(localStorage.getItem("TV"))
+   
+   
+  
+
+       a.map(function(elem,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",elem.image)
+          var tit=document.createElement("h4")
+          tit.textContent=elem.title
+          div.append(im,tit)
+          document.querySelector("#mright").append(div)
+       })
+
+       function b1fun(){
+        //    event.preventDefault()
+        document.querySelector("#mright").textContent=""
+   
+          
+       b.map(function(eleme,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",eleme.image)
+          var tit1=document.createElement("h4")
+          tit1.textContent=eleme.title
+          div.append(im,tit1)
+          document.querySelector("#mright").append(div)
+
+        })
+    }
+
+    function b2fun(){
+        //    event.preventDefault()
+        document.querySelector("#mright").textContent=""
+      
+          
+     c.map(function(eleme,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",eleme.image)
+          var tit1=document.createElement("h4")
+          tit1.textContent=eleme.title
+          div.append(im,tit1)
+          document.querySelector("#mright").append(div)
+
+        })
+    }
+
+    function b3fun(){
+        //    event.preventDefault()
+        document.querySelector("#mright").textContent=""
+     
+          
+     a.map(function(eleme,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",eleme.image)
+          var tit1=document.createElement("h4")
+          tit1.textContent=eleme.title
+          div.append(im,tit1)
+          document.querySelector("#mright").append(div)
+
+        })
+    }

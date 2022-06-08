@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <style>
+        /* #main{
+            display:flex;
+            width:95%;
+            margin: auto;
+            justify-content: space-between;
+            background-color: yellow;
+            padding: 2%;
+            margin-top:-1%;
+            border-radius: 10Px;  
+            position: fixed;  
+            height: 4%;
+            
+        } */
+        /* #right{
+            display: flex;
+            
+            width:40%
+        } */
+        #mright{
+            width:50%;
+            display: grid;
+            grid-template-columns: repeat(3,20%);
+           gap: 10px;
+            margin-top: 5%;    
+        }
+     
+        #mleft{
+            width:15%;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+        #mcontain{
+            display: flex;
+            background-color: black;
+            justify-content: space-around;
+            
+          
+        }
+        p:hover{
+            cursor: pointer;
+            /* background-color: rgb(122, 101, 101); */
+            color:white;
+            height: min-content;
+        }
+        p,h4{
+            color: white;
+            padding: 5px;
+        }
+       
+        #mright img{
+            width:100%;
+            border-radius: 10%;
+            
+        }
+       
+        /* .sub{
+            display:none
+        } */
+      .symbol{
+          color: black;
+
+      }
+        .sub{
+            display:none;
+            background-color: rgb(58, 51, 51);
+            border-radius: 10px;
+        }
+        .symbol:hover .sub{
+            display: block;
+            cursor: pointer;
+            color: white;
+
+        }
+        .sub>h3{
+            padding: 15px;
+            text-align: center;
+        }
+       .symbol h5{
+           color: rgb(34, 23, 23);
+       }
+       img{
+           width: 250px;
+           height: 90px;
+           width:60px
+       }
+
+       
+    </style>
+</head>
+<body>
+   
+
+         
+       
+        </div>
+    </div>
+    <hr style="color: white;">
+   <div >
+     
+
+    <div id="mcontain">
+        <div id="mleft">
+            <p onclick="b1fun()">Exclusive movie on zee5</p>
+            <p onclick="b2fun()">Zee5 original first <br> episode free</p>
+            <p onclick="b3fun()">IMDB top pics</p>
+            <p onclick="b4fun()">Premium bollywood blockbuster</p>
+        </div>
+        <div id="mright"></div>
+    </div>
+
+
+</body>
+</html>
+
+
+<script>
+    var hdata0=[
+    {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-393368/list/00393368inlist31707932231701428924d1b54418981f368c5858558a.jpg",
+            title:"",
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-1z558385/list/1170x658withlogo9cc4002f26e14a24bee5bf39e8348b5f.jpg",
+            title:"",
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-402510/list/00402510inlist.jpg",
+            title:"",
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-1z55290/list/1170x658withlogod0f681e2e6c246488a0b0a38e1813231.jpg",
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-1z51013/list/1170x658withlogo4a81726877ef4b80ac6975a22a7ba7379050bb0d11614135a9f925efd1c33c91.jpg",
+
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-164998/list/1170x658withlogo826115889.jpg",
+
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-133958/list/thodraa1170x658withlogo.jpg",
+
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-320135/list/00320135inlist.jpg",
+
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-206010/list/1170x658withlog2129673017.jpg",
+        },
+  
+]
+ var hdata1=[
+ {
+      image:"https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-403592/portrait/1920x7702e9f071dce1b4ba8a9d74a4bde9a4197f95d174eced94f5a98662dd1606c49e1.jpg",
+     
+     
+    },
+  
+  {
+      image:"https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-1z541457/portrait/1920x770f043a6d33daf4063bbcac9fc5997797d.jpg",
+     
+     
+    },
+ 
+  {
+      image:"https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-1z571846/portrait/1920x770eac226b61d9c4209984e4db81876ada6.jpg",
+   
+     
+    },
+  
+  {
+      image:"https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-1z552045/portrait/1920x770ea9d281a0d6e4678bd1a483dc1afa620.jpg",
+     
+     
+    },
+ 
+  {
+      image:"https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-1637/portrait/061637incover1859434367.jpg",
+    
+     
+    },
+  
+  {
+      image:"https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-59341/portrait/1920x770d10d09d846844db5915aefd7bed5499008e3e934c07a403a83516fd1e0e38cfc.jpg",
+      
+     
+    },
+    {
+    image:"https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-232924/portrait/1920x77002fab047a2474c16b3ce821d9cb54d344eb65d60f79a47cf8f02f7c99264636f.jpg",  
+  
+},
+   
+  {
+    image:"https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-3444/portrait/1920x770183493879818349387985f70508f6ecf4f48b538e0ced73d73df.jpg",
+    
+  }
+]
+</script>

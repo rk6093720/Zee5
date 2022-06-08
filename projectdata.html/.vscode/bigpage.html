@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #upperimg{
+           /* display:flex; */
+         
+        
+           
+      overflow: hide;
+        
+        }
+        #upperimg div{
+            width:70%;
+            margin: auto;
+        }
+        img{
+            width: 100%;
+        }
+
+       
+
+        #upperimg div:hover button{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            display: block;
+            color:white;
+            background-color: grey;
+            cursor: pointer;
+       
+            
+        }
+        #upperimg div:hover img{
+            width: 50%;
+        }
+      
+       
+        #upperimg div:hover {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+           
+            cursor: pointer;
+       
+            
+        }
+        #upperimg div:hover h4{
+            font-size: 10px;
+            color:grey
+        }
+       #upperimg button:hover{
+            background-color: hotpink;
+        }
+      
+
+       
+
+        
+        button{
+            display: none;
+            border:0px;
+            padding: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div id="upperimg">
+     
+    </div>
+    <div id="lowimg">
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+  var a= JSON.parse(localStorage.getItem("webpage"))
+  var b=JSON.parse(localStorage.getItem("big"))
+  
+  a.map(function(elem,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",elem.image)
+          var tit=document.createElement("h4")
+          var bt=document.createElement("button")
+          bt.textContent="watch now"
+          tit.textContent=elem.title
+          div.append(im,tit ,bt)
+          document.querySelector("#upperimg").append(div)
+       })
+  
+    //   b .map(function(elem,ind){
+    //        var div=document.createElement("div")
+    //       var im=document.createElement("img")
+    //       im.setAttribute("src",elem.image)
+    //       var tit=document.createElement("h4")
+    //       var bt=document.createElement("button")
+    //       bt.textContent="watch now"
+    //       tit.textContent=elem.title
+    //       div.append(im,tit ,bt)
+    //       document.querySelector("#lowimg").append(div)
+    //    })
+
+
+</script>

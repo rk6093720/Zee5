@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body{
+    background-color: black;
+  }
+#container{
+            
+    display: flex;
+    margin-top: 0px;
+    height: 70px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#left{
+    width: 60%;
+    justify-content: flex-start;
+    /* border: 2px solid red; */
+    height: 70px;
+    margin-top: 0px;
+    display: inline-flex;
+    
+
+}
+ #right{
+    width: 40%;
+    justify-content: flex-start;
+    /* border: 2px solid red; */
+    height: 70px;
+    
+    display: inline-flex;
+    display: flex;
+    justify-content: space-evenly;
+  
+
+}
+.dropbtn{
+  font-size: 50px;
+}
+
+li {
+    float: left;
+    
+    
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 18px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+       
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  
+  margin-top: 2px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid whitesmoke;
+  font-size: 19px;
+
+
+  
+}
+
+#left > li.dropdown {
+  display: inline-block;
+  
+ 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(16, 4, 37);
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 15px;
+  font-size: 10px;
+  /* font-weight: bolder; */
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  
+
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 15px 15px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  /* border-bottom: 2px solid whitesmoke; */
+
+}
+
+.dropdown-content a:hover {background-color: rgb(47, 42, 56);
+    /* border-bottom: 2px solid whitesmoke; */
+    border-radius: 10px;
+    margin: 10px;
+    border-bottom: rgb(47, 42, 56);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  
+  
+}
+img{
+  width: 20px;
+}
+#zee5_logo > img{
+  width: 50px;
+  border-bottom: none;
+  margin: 10px 20px 10px 0px;
+}
+
+
+#right > #search{
+  color: #f1f1f1;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(41, 39, 39);
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-top: 13px;
+    padding: 9px;
+}
+#right > #search:hover{
+  width: 22px;
+  height: 22px;
+  background-color: grey;
+}
+#right > .language{
+  color: #f1f1f1;
+  width: 38px;
+  height: 38px;
+  background-color: rgb(41, 39, 39);
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-top: 16px;
+  padding: 9px;
+  font-size: 15px;
+}
+#right > .language:hover{
+  width: 42px;
+  height: 42px;
+  background-color: grey;
+}
+
+.login {
+  background-color: rgb(8, 23, 41);
+  border:1px solid whitesmoke;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  height: 35px;
+  font-size: 14px;
+  margin: 18px;
+  /* transition-duration: 0.4s; */
+  cursor: pointer;
+  border-radius: 7px;
+  
+}
+
+.login:hover {
+    background-color: #e7e7e7;
+    color: black;
+    
+  }
+  .buy_plan{
+    background-color: rgb(177, 23, 177);
+    padding: 10px;
+    text-align: center;
+    border: none;
+    font-size: 14px;
+    margin: 16px 5px;
+    /* transition-duration: 0.4s; */
+    cursor: pointer;
+    border-radius: 7px;
+    color: white;
+    text-align: center;
+    padding-top: 8px;
+    height: 35px;
+    
+  }
+  .buy_plan:hover{
+    background-color: rgb(104, 15, 104);
+  }
+
+
+
+  /* /-----------------------------------------------------------------------------------/ */
+
+
+
+  .mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  /* background-color: black; */
+  margin-top: 0px;
+ 
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 0px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  /* transition: 0.6s ease; */
+  border-radius: 0 3px 3px 0;
+  /* user-select: none; */
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* movie text */
+.text {
+  color: #f2f2f2;
+  font-size: 30px;
+  padding: 20px 20px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: left;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+  
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 6px;
+  width: 8px;
+  /* margin: 0 2px; */
+  background-color: #bbb;
+  border-radius: 30%;
+  display: inline-block;
+  /* transition: background-color 0.6s ease; */
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3.5s;
+  animation-name: fade;
+  animation-duration: 3.5s;
+  
+}
+
+/* @-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+} */
+
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+  /* /----------right hand side menu bar-----------/ */
+
+  #myMenu{
+    margin-top: -2%;
+    margin-right: -13%;
+    background-color: rgb(12, 2, 31);
+   
+  }
+  #opennav{
+    margin-top: 2%;
+  }
+
+  .sidenavmenu {
+  height: 100%;
+  
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  /* top: 0;
+  left: 0; */
+  background-color: #111;
+  overflow-x: auto;
+  transition: 0.5s;
+  padding-top: 30px;
+  /* margin-top: 5%; */
+  margin-right: 0%;
+}
+
+.sidenavmenu a {
+  padding: 15px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+} 
+.sidenavmenu a:nth-child(2){
+  padding-top: 22%
+}
+
+.sidenavmenu a:hover {
+  color: #f1f1f1;
+  
+}
+
+.sidenavmenu .closebtn {
+  position: absolute;
+  padding-top: 5px;
+  right: 0px;
+  margin-right: 0%;
+  font-size: 30px;
+  /* margin-left: 0px; */
+}
+
+/* @media screen and (max-height: 450px) {
+  .sidenavmenu {padding-top: 15px;}
+  .sidenavmenu a {font-size: 18px;}
+
+} */
+
+
+.dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  margin-left: 16px;
+}
+
+/* On mouse-over */
+.dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  /* background-color: green; */
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */ 
+.dropdown-container {
+  display: none;
+  padding-left: 8px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+.dropdown-container a{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+
+}
+.dropdown-container a:hover{
+    background-color: rgb(39, 20, 75);
+    border-radius: 10px;
+    margin-right: 15px;
+    /* font-size: 10px; */
+}
+.dropdown-container a:nth-child(2){
+    padding-top: 2%;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 10px;
+  margin-right: 15px;
+}
+/* hr{
+    height: -50px;
+    color: rgb(12, 2, 31)
+} */
+
+  /* /-------------nppage design--------------/ */
+ 
+
+ 
+</style>
+</head>
+
+
+<body>
+<div id="container">
+
+<div id="left">
+    <a href="" id="zee5_logo"><img src="https://www.zee5.com/images/ZEE5_logo.svg?ver=2.50.85" alt="zee5 logo"></a>
+
+  <li class="dropdown">
+    <a href="#home" class="dropbtn">Home</a>
+  </li>
+  <li class="dropdown">
+    <a href="" class="dropbtn">TV Shows</a>
+    <div class="dropdown-content">
+      <a href="#">Top Hindi Shows</a>
+      <a href="#">Top Marathi Shows</a>
+      <a href="#">Latest On ZEE5</a>
+      <a href="#">English Shows You Can't Miss</a>
+    </div>
+  </li>
+  <li class="dropdown">
+ 
+    <a href="" class="dropbtn">Movies</a>
+    <div class="dropdown-content">
+      <a href="#">Exclusive Movies on ZEE5</a>
+      <a href="#">500+ Free Movies</a>
+      <a href="#">Popular Movies On ZEE5</a>
+      <a href="#">Top ZEE5 Movies in Marathi</a>
+    </div>
+  </li>
+
+  <!----------------nppage-------------->
+
+  <!-- <div id="mcontain">
+    <div id="mleft">
+        <p onclick="b1fun()">Exclusive movie on zee5</p>
+        <p onclick="b2fun()">Zee5 original first <br> episode free</p>
+        <p onclick="b3fun()">IMDB top pics</p>
+        <p onclick="b4fun()">Premium bollywood blockbuster</p>
+    </div>
+    <div id="mright"></div>
+</div> -->
+
+ 
+  <li class="dropdown">
+
+    <a class="dropbtn">Web Series</a>
+
+    <!-- <div class="dropdown-content">
+      <a href="#">Hindi Web Series</a>
+      <a href="#">Marathi Web Series</a>
+      <a href="#">English Web Series</a>
+    </div> -->
+
+  </li>
+  
+  <li class="dropdown">
+    <a href="" class="dropbtn">News</a>
+    <div class="dropdown-content">
+      <a href="#">Live News Channel Free</a>
+      <a href="#"> Headlines Of The Day</a>
+      <a href="#"> World Of Showbiz</a>
+      <a href="#">Round The Globe</a>
+    </div>
+  </li>
+  
+  <li class="dropdown">
+    <a href="" class="dropbtn"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhTFzaQrpwlV1EkliQMAA9UlIhNyeGLGxXjA&usqp=CAU" alt="">
+    </a>
+    <div class="dropdown-content">
+      <a href="#">Premium</a>
+      <a href="#">Live TV</a>
+      <a href="#">ZEEPLEX</a>
+      <a href="#">Play</a>
+      <a href="#">Articles</a>
+      <a href="#">Learning</a>
+      <a href="#">Kids</a>
+      <a href="#">Videos</a>
+      <a href="#">Stories</a>
+    </div>
+  </li> 
+</div>
+
+<!------------navbar right side-------------->
+
+<div id="right">
+    <a href="" id="search">
+      <i class="fa fa-search"></i>
+    </a> 
+    <button class="language"><b>A</b></button>
+
+    <button class="login"><b>LOGIN</b></button>
+
+    <button class="buy_plan">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxVAdhg1z5kYF8L6McRRgCnuwH8WVKgGYJyw&usqp=CAU" alt="">
+       <b>BUY PLAN</b>
+    </button>
+<!----------side menu bar---------------->
+
+    <div id="myMenu" class="sidenavmenu">
+      <a href="#" class="closebtn" onclick="closeNav()">&#9776;</a>
+    
+      <a href=""><b>Home</b></a>
+      <hr>
+      <button class="dropdown-btn"><b>Explore</b>
+        <i class="fa fa-caret-down"></i> </button>
+      <div class="dropdown-container">
+        <a href="#">TV Shows</a>
+        <a href="#">Movies</a>
+        <a href="#">Web Series</a>
+        <a href="#">News</a>
+        <a href="#">Premium</a>
+        <a href="#">Live TV</a>
+        <a href="#">Music</a>
+        <a href="#">ZEEPLEX</a>
+        <a href="#">Play</a>
+        <a href="#">Articles</a>
+        <a href="#">Learning</a>
+        <a href="#">Kids</a>
+        <a href="#">Videos</a>
+        <a href="#">Stories</a>
+        <a href="#">Channels</a>
+      </div>
+      <hr>
+      <button class="dropdown-btn"><b>Plans</b>
+        <i class="fa fa-caret-down"></i> </button>
+      <div class="dropdown-container">
+        <a href="#">Buy plan</a>
+        <a href="#">Have a prepaid code ?</a>
+        
+      </div>
+      <hr>
+      <button class="dropdown-btn"><b>Settings</b>
+        <i class="fa fa-caret-down"></i> </button>
+      <div class="dropdown-container">
+        <a href="#">Reset Settings to default</a>
+        
+      </div>
+      <hr>
+      <button class="dropdown-btn"><b>Info</b>
+        <i class="fa fa-caret-down"></i> </button>
+      <div class="dropdown-container">
+        <a href="#">About Us</a>
+        <a href="#">Help Center</a>
+        <a href="#">Grievance Redressal</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <hr>
+      <p style="text-align: center;">Version 2.50.87</p>
+    </div>
+
+    <span style="font-size:30px;cursor:pointer"  id="opennav" onclick="openNav()">&#9776;</span>
+
+
+</div>
+</div>
+
+<!---------------slider------------------------->
+
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    
+    <img src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-1z562203/cover/1170x658withlogo366e887b55c34a6da1a869037694ace4.jpg" style="width:100%">
+    <div class="text"><b>Antim: The Final Truth</b>
+    <br>
+    <button class="login"><b>> WATCH</b></button>
+    <button class="buy_plan"><b>BUY PLAN</b></button>
+    </div>
+  </div>
+  
+  <div class="mySlides fade">
+    
+    <img src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-1z568055/cover/1170x658withlogofd047a507ba8417ab8080f3d31e79cd5.jpg" style="width:100%">
+    <div class="text"><b>Pandu</b>
+      <br>
+      <button class="login"><b>> WATCH</b></button>
+      <button class="buy_plan"><b>BUY PLAN</b></button>
+    </div>
+  </div>
+  
+  <div class="mySlides fade">
+    
+    <img src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-3510/cover/1170x658withlogofc32990393be4e279ce7abccfd7dc24a.jpg" style="width:100%">
+    <div class="text"><b>Meet</b>
+      <br>
+      <button class="login"><b>> WATCH</b></button>
+      <button class="buy_plan"><b>BUY PLAN</b></button>
+    </div> 
+  </div>
+  <div class="mySlides fade">
+    
+    <img src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-1z573699/cover/1170x658withlogo38effc541f5c4afa8cc5dfabe2d4fea6.jpg" style="width:100%">
+    <div class="text"><b>36 Farmhouse</b>
+    <br>
+    <button class="login"><b>> WATCH</b></button>
+    <button class="buy_plan"><b>BUY PLAN</b></button>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-4z560880/cover/1170x658withlogo899a4756a5af4fb2b07c139369d02f66.jpg" style="width:100%">
+    <div class="text"><b>Kaun Banegi <br> Shikharwati</b>
+    <br>
+    <button class="login"><b>> WATCH</b></button>
+    <button class="buy_plan"><b>BUY PLAN</b></button>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-127/cover/1170x658withlogod25326d4776a4d6e85f343f83718421e.jpg" style="width:100%">
+    <div class="text"><b>Kumkum Bhagya</b>
+    <br>
+    <button class="login"><b>> WATCH</b></button>
+    <button class="buy_plan"><b>BUY PLAN</b></button>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-101-externalli_806754021/cover/aajtak_1170copy_515610009.jpg" style="width:100%">
+    <div class="text"><b>Aaj Tak LIVE</b>
+    <br>
+    <button class="login"><b>> WATCH</b></button>
+    <!-- <button class="buy_plan"><b>BUY PLAN</b></button> -->
+    </div>
+  </div>
+
+  
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span> 
+    
+  </div>
+
+
+
+  <!-------------------scripting---------------------->
+  
+  <script>
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+
+
+// side menu bar script
+
+function openNav() {
+  document.getElementById("myMenu").style.width = "300px";
+}
+
+function closeNav() {
+  document.getElementById("myMenu").style.width = "0";
+
+}
+
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+
+  /------------nppage----------------------/
+
+  // var a= JSON.parse(localStorage.getItem("webseries"))
+  //  var b=JSON.parse(localStorage.getItem("movie"))
+  //  var c=JSON.parse(localStorage.getItem("movie1"))
+  //  var d=JSON.parse(localStorage.getItem("movie2"))
+  
+
+  //      a.map(function(elem,ind){
+  //          var div=document.createElement("div")
+  //         var im=document.createElement("img")
+  //         im.setAttribute("src",elem.image)
+  //         var tit=document.createElement("h4")
+  //         tit.textContent=elem.title
+  //         div.append(im,tit)
+  //         document.querySelector("#mright").append(div)
+  //      })
+
+  //      function b1fun(){
+  //       //    event.preventDefault()
+  //       document.querySelector("#mright").textContent=""
+   
+          
+  //      b.map(function(eleme,ind){
+  //          var div=document.createElement("div")
+  //         var im=document.createElement("img")
+  //         im.setAttribute("src",eleme.image)
+  //         var tit1=document.createElement("h4")
+  //         tit1.textContent=eleme.title
+  //         div.append(im,tit1)
+  //         document.querySelector("#mright").append(div)
+
+  //       })
+  //   }
+
+  //   function b2fun(){
+  //       //    event.preventDefault()
+  //       document.querySelector("#mright").textContent=""
+      
+          
+  //    c.map(function(eleme,ind){
+  //          var div=document.createElement("div")
+  //         var im=document.createElement("img")
+  //         im.setAttribute("src",eleme.image)
+  //         var tit1=document.createElement("h4")
+  //         tit1.textContent=eleme.title
+  //         div.append(im,tit1)
+  //         document.querySelector("#mright").append(div)
+
+  //       })
+  //   }
+
+  //   function b3fun(){
+  //       //    event.preventDefault()
+  //       document.querySelector("#mright").textContent=""
+     
+          
+  //    a.map(function(eleme,ind){
+  //          var div=document.createElement("div")
+  //         var im=document.createElement("img")
+  //         im.setAttribute("src",eleme.image)
+  //         var tit1=document.createElement("h4")
+  //         tit1.textContent=eleme.title
+  //         div.append(im,tit1)
+  //         document.querySelector("#mright").append(div)
+
+  //       })
+  //   }
+
+  //   function b4fun(){
+  //       //    event.preventDefault()
+  //       document.querySelector("#mright").textContent=""
+      
+          
+  //    d.map(function(eleme,ind){
+  //          var div=document.createElement("div")
+  //         var im=document.createElement("img")
+  //         im.setAttribute("src",eleme.image)
+  //         var tit1=document.createElement("h4")
+  //         tit1.textContent=eleme.title
+  //         div.append(im,tit1)
+  //         document.querySelector("#mright").append(div)
+
+  //       })
+  //   }
+
+  
+  </script>
+  
+</body>
+</html>
